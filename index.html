@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>Two Leaves - HTML, CSS, Project</title>
+</head>
+
+<body>
+    <p class="strip">Free US shipping for orders over $50</p>
+    <div id="main">
+        <br>
+        <nav>
+            <div class="nav-left">
+                <p class="ham">≡</p>
+                <li>Shop
+                    <i class="ri-arrow-down-s-line"></i>
+                </li>
+                <li>Learn
+                    <i class="ri-arrow-down-s-line"></i>
+                </li>
+                <li>Reviews</li>
+            </div>
+            <div class="nav-center">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <div class="nav-right">
+                <li>My Account</li>
+                <li>Cafe & WholeSale Partners</li>
+                <li>Tea Journal</li>
+                <div class="icons">
+                    <i class="ri-search-line"></i>
+                    <i class="ri-shopping-bag-line"></i>
+                </div>
+                <span>0</span>
+            </div>
+        </nav>
+
+        <div class="slider">
+
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+
+            <div class="slider-track">
+
+                <section class="slide slide1">
+                    <div class="content">
+                        <span class="badge">NEW!</span>
+                        <h1>Yuzu Matcha</h1>
+                        <p>
+                            A collaboration with our buds at YUZUCO.
+                            Two Leaves and a Bud's Yuzu Matcha brings
+                            together premium yuzu and pure matcha.
+                        </p>
+                        <button>Shop Now</button>
+                    </div>
+
+                    <div class="image">
+                        <img src="main-bg.png" alt="Yuzu Matcha">
+                    </div>
+
+                    <label for="slide2" class="next"><i class="ri-arrow-right-s-line"></i></label>
+            </div>
+        </div>
+    </div>
+    <div id="best">
+        <h1>A greate cup start with a carefull pluck - the top two leaves and a bud</h1>
+        <h2>Best Seller</h2>
+        <div id="cards">
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="badge">TEA SACHETS</span>
+
+                    <span class="rating">★ 4.72 (87)</span>
+
+                    <img src="card1.png" alt="Organic Tropical Green Tea" />
+
+                    <button class="add-btn">
+                        <span>+</span>
+                        Add
+                    </button>
+                </div>
+
+                <div class="product-info">
+                    <h3>Organic Tropical Green Tea</h3>
+
+                    <p class="price">From $11.95</p>
+
+                    <p class="description">
+                        Our Organic Tropical Green is a fruity and fun
+                        take on a classic green tea.
+                    </p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="badge">MATCHA</span>
+
+                    <span class="rating">★ 4.72 (87)</span>
+
+                    <img src="card2.png" alt="Organic Tropical Green Tea" />
+
+                    <button class="add-btn">
+                        <span>+</span>
+                        Add
+                    </button>
+                </div>
+
+                <div class="product-info">
+                    <h3>Organic Ceremonial Matcha -
+                        1 oz Tin</h3>
+
+                    <p class="price">From $19.95</p>
+
+                    <p class="description">
+                        Our Ceremonial Matcha is organic and
+                        ceremonial-grade Japanese matcha.
+                    </p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="badge">NAKED SACHETS</span>
+
+                    <span class="rating">★ 4.72 (87)</span>
+
+                    <img src="card3.png" alt="Organic Tropical Green Tea" />
+
+                    <button class="add-btn">
+                        <span>+</span>
+                        Add
+                    </button>
+                </div>
+
+                <div class="product-info">
+                    <h3>Organic Peppermint -
+                        50 Naked Tea Sachets</h3>
+
+                    <p class="price">From $21.95</p>
+
+                    <p class="description">
+                        Our organic Peppermint tea is made from
+                        peppermint grown in Washington State.
+                    </p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="badge">NAKED SACHETS</span>
+
+                    <span class="rating">★ 4.72 (87)</span>
+
+                    <img src="card4.png" alt="Organic Tropical Green Tea" />
+
+                    <button class="add-btn">
+                        <span>+</span>
+                        Add
+                    </button>
+                </div>
+
+                <div class="product-info">
+                    <h3>Organic Earl Grey -
+                        50 Naked Tea Sachets</h3>
+
+                    <p class="price">From $21.95</p>
+
+                    <p class="description">
+                        Earl Grey's distinctive aroma comes from
+                        bergamot - a citrus fruit about the size of a
+
+                        Get 10% Off
+
+                        shaped
+                        orange but yellow-green and slightly pear-
+                    </p>
+                </div>
+            </div>
+        </div>
+        <button class="ex-al-te">Explore All Teas</button>
+    </div>
+    <div id="reviews">
+        <h2>Reviews</h2>
+        <br>
+        <h1>Loved
+
+            by
+
+            tea
+
+            people
+
+            everywhere
+            .
+        </h1>
+        <h1>
+            Here’s
+
+            what
+
+            they’re
+
+            saying.
+        </h1>
+
+        <section class="container">
+
+            <div class="card peach">
+                <div class="review">
+                    <p>“The right amount of spice.”</p>
+                    <span>Angelina R.</span>
+                </div>
+                <div class="product orange">
+                    <div class="pack orange">ORGANIC<br>MOUNTAIN<br>CHAI</div>
+                    <div class="product-name">ORGANIC <br> MOUNTAIN <br> HICH<br> CHAI</div>
+                    <button>Shop</button>
+                </div>
+            </div>
+
+            <div class="card green">
+                <div class="review">
+                    <p>“This drink is incredibly refreshing, especially when served over ice. It's light, crisp, and
+                        instantly cooling, making it perfect for a quick refresh any time of day.”</p>
+                    <span>Jacob K.</span>
+                </div>
+
+                <div class="product mint">
+                    <div class="pack mint">ORGANIC<br>MATCHA <br>MINT</div>
+                    <div class="product-name">ORGANIC<br>MATCHA <br>MINT</div>
+                    <button>Shop</button>
+                </div>
+            </div>
+            <div class="card yellow ">
+                <div class="review">
+                    <p>“One sip and you can feel the difference—clean energy, rich flavor, and all the good stuff your
+                        body loves. Literally liquid GOLD.”</p>
+                    <span>Harrison G.</span>
+                </div>
+
+                <div class="product gold">
+                    <div class="pack gold">TWO<br>ROOTS<br>GOLDEN</div>
+                    <div class="product-name">TWO <br> ROOTS <br> GOLDEN <br> LATTE <br> MIX</div>
+                    <button>Shop</button>
+                </div>
+            </div>
+
+            <div class="card light-green">
+                <div class="review">
+                    <p>“Soo tasty and energizing.”</p>
+                    <span>Gracie M.</span>
+                </div>
+
+                <div class="product lime">
+                    <div class="pack lime">ORGANIC<br>GREEN<br>TEA</div>
+                    <div class="product-name">ORGANIC <br> TROPICAL <br> GREEN <br> TEA</div>
+                    <button>Shop</button>
+                </div>
+            </div>
+
+
+        </section>
+
+    </div>
+
+    <section id="origins">
+        <h2>Our origins</h2>
+        <br>
+        <br>
+        <br>
+        <h1>born in</h1>
+        <h1 style="margin-top: -30px;">colorado</h1>
+        <h5>Our
+
+            founder,
+
+            Richard,
+
+            started
+
+            Two
+
+            Leaves
+
+            and
+
+            a
+
+            Bud
+
+            in
+
+            pursuit
+
+            of
+
+            a
+
+            truly
+
+            great
+
+            cup.
+
+            Two
+
+            decades
+
+            later,
+
+            that
+
+            same
+
+            care
+
+            and
+
+            curiosity
+
+            guide
+
+            everything
+
+            we
+
+            make.</h5>
+            <div class="dashes">
+                <div class="dash">
+                    <img src="https://www.twoleavestea.com/cdn/shop/files/Quality_without_pretense.svg?v=1773116402&width=180.0" alt="Img">
+                    <p>Quality, Without Pretense</p>
+                </div>
+                <div class="dash">
+                    <img src="//www.twoleavestea.com/cdn/shop/files/care_for_ppl_1.svg?v=1773116330&width=144" alt="Img">
+                    <p>Care for People & Planet</p>
+                </div>
+                <div class="dash">
+                    <img src="	https://www.twoleavestea.com/cdn/shop/files/transparent_sourcing.svg?v=1773116421&width=122" alt="Img">
+                    <p>Transparent Sourcing</p>
+                </div>
+            </div>
+            <button>Our Story</button>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>

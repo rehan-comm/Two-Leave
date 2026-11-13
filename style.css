@@ -1,0 +1,723 @@
+@font-face {
+    font-family: Rackless;
+    src: url('./fonts/RecklessCondensedM-TRIAL-Book.otf');
+}
+
+@font-face {
+    font-family: Recoleta;
+    src: url("./fonts//Recoleta\ Alt\ Light.otf");
+}
+
+.strip {
+    width: 100%;
+    background-color: #2A2857;
+    font-size: 10px;
+    text-align: center;
+    padding: 3px 0px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+#main {
+    width: 100%;
+    height: 580px;
+    background: #69B270;
+    border-bottom: 2px solid black;
+}
+
+nav {
+    width: 98%;
+    height: 50px;
+    background: white;
+
+    animation: expand linear both;
+    animation-timeline: scroll();
+    animation-range: 0px 150px;
+    margin: 0px auto;
+    display: flex;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+@keyframes expand {
+    to {
+        width: 100%;
+        margin-top: 0;
+        border-radius: 0;
+        position: sticky;
+    }
+}
+
+.nav-left {
+    width: 33%;
+    display: flex;
+    height: 100%;
+    gap: 20px;
+    padding: 0px 15px;
+}
+
+.nav-left li {
+    list-style: none;
+    margin: auto 0px;
+    font-family: "Rackless";
+}
+
+.nav-left i {
+    background-color: #C0DBFE;
+    border-radius: 50%;
+    font-size: 10px;
+    padding: 1px;
+    border: 1px solid black;
+    margin-left: 4px;
+}
+
+.nav-center {
+    width: 18%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.nav-center img {
+    width: 80px;
+}
+
+.nav-right {
+    width: 49%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 15px;
+}
+
+.nav-right li {
+    list-style: none;
+    font-weight: 500;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.icons i {
+    font-size: 25px;
+    font-weight: 200;
+    display: inline-block;
+    transform: scaleX(-1);
+}
+
+.nav-right span {
+    font-size: 8px;
+    margin-left: -30px;
+    background-color: #FFB500;
+    height: 13px;
+    padding: 0px 5px;
+    border-radius: 20px;
+    z-index: 1;
+    font-weight: 500;
+    border: 1px solid black;
+}
+
+.slider {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+input {
+    display: none;
+}
+
+.slider-track {
+    display: flex;
+    width: 200%;
+    height: 100%;
+    transition: transform 0.7s ease;
+}
+
+.slide {
+    width: 50%;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide1 {
+    background: #79b77e;
+}
+
+.slide2 {
+    background: #d9b96e;
+}
+
+.content {
+    width: 40%;
+    color: white;
+    z-index: 2;
+    margin-top: 15%;
+}
+
+.badge {
+    display: inline-block;
+    border-radius: 5px;
+    background: #d8f05b;
+    border: 2px solid black;
+    color: black;
+    padding: 2px 2px;
+    font-size: 23px;
+    font-weight: bolder;
+    transform: rotate(-3deg);
+}
+
+.content h1 {
+    font-size: 55px;
+    font-family: "Recoleta";
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.content p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.content button {
+    background: #242052;
+    color: white;
+    border: none;
+    padding: 10px 43px;
+    border: 2px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.image {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.next {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 5;
+    font-weight: 200;
+    border: 1px solid black;
+}
+
+#slide1:checked~.slider-track {
+    transform: translateX(0);
+}
+
+#slide2:checked~.slider-track {
+    transform: translateX(-50%);
+}
+
+.ham {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .slider {
+        height: 82vh;
+    }
+
+    .slide {
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 25px;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .content h1 {
+        font-size: 38px;
+    }
+
+    .image {
+        width: 100%;
+        height: 50%;
+    }
+
+    .next {
+        right: 10px;
+        top: 50%;
+    }
+}
+
+
+@media (max-width: 1025px) {
+    .nav-left li {
+        display: none;
+    }
+
+    .nav-right li {
+        display: none;
+    }
+
+    .ham {
+        display: flex;
+        background: none;
+        font-size: 60px;
+        margin-top: -17px;
+    }
+
+}
+
+@media (max-width: 440px) {
+    nav {
+        width: 95%;
+        height: 70px;
+    }
+
+    .nav-left {
+        padding: 0px 10px;
+        width: 33.3%;
+    }
+
+    .nav-right {
+        width: 33.3%;
+    }
+
+    .icons i {
+        font-size: 35px;
+    }
+
+    .nav-center {
+        width: 33.4%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-center img {
+        width: 100px;
+    }
+
+
+    .strip {
+        font-size: 14px;
+    }
+
+    .nav-right li {
+        display: none;
+    }
+
+    .nav-left li {
+        display: none;
+    }
+
+    .ham {
+        display: flex;
+        background: none;
+        font-size: 60px;
+        margin-top: -17px;
+    }
+
+    .content button {
+        width: 100%;
+    }
+}
+
+#best {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid black;
+    background-color: #FBF9EB;
+    padding: 10% 0px;
+}
+
+#best h1 {
+    font-size: 35px;
+    text-align: center;
+    font-family: "Reckless";
+    padding: 0px 21%;
+}
+
+#best h2 {
+    text-align: center;
+    font-size: 25px;
+    background-color: #DAAEEA;
+    text-transform: uppercase;
+    font-weight: bolder;
+    width: 160px;
+    border: 1px solid black;
+    margin: 0px auto;
+    margin-top: 100px;
+    border-radius: 3px;
+    rotate: -3deg;
+}
+
+#cards {
+    display: flex;
+    margin: 0px auto;
+    margin-top: 40px;
+}
+
+.product-card {
+    width: 245px;
+    margin: 7px;
+}
+
+.product-image {
+    width: 100%;
+    height: 275px;
+    background: #bff08f;
+    border: 1px solid #222;
+    border-radius: 7px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: white;
+    border: 1px solid #222;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.rating {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    font-size: 11px;
+    color: #333;
+}
+
+.product-image img {
+    width: 145px;
+    height: 180px;
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+.add-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 37px;
+    height: 37px;
+    background: white;
+    border: 1px solid #222;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.add-btn span {
+    font-size: 20px;
+    line-height: 18px;
+}
+
+.product-info {
+    padding-top: 15px;
+}
+
+.product-info h3 {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 11px;
+    margin-bottom: 7px;
+}
+
+.description {
+    font-size: 11px;
+    line-height: 1.4;
+    color: #666;
+}
+
+.ex-al-te {
+    background: #242052;
+    color: white;
+    border: none;
+    padding: 10px 43px;
+    border: 2px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-left: 400px;
+    font-size: 16px;
+}
+
+#reviews {
+    width: 100%;
+    height: 850px;
+    padding: 10% 0px;
+    border-bottom: 2px solid black;
+    background-color: #FBF9EB;
+}
+
+#reviews h2 {
+    text-align: center;
+    font-size: 25px;
+    background-color: #73BC25;
+    text-transform: uppercase;
+    font-weight: bolder;
+    width: 120px;
+    border: 1px solid black;
+    margin: 0px 130px;
+    border-radius: 3px;
+    rotate: -3deg;
+}
+
+#reviews h1 {
+    margin: 0px 130px;
+    font-size: 40px;
+    font-family: "Reckless";
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 7px;
+    width: 100%;
+    margin: 0px 15px;
+    margin-top: 70px;
+}
+
+.card {
+    height: 370px;
+    border: 1px solid #222;
+    border-radius: 7px;
+    padding: 10px 5px 5px;
+    display: flex;
+    width: 24%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.peach {
+    background: #f3b08e;
+}
+
+.green {
+    background: #a7df79;
+}
+
+.yellow {
+    background: #ffd36b;
+}
+
+.light-green {
+    background: #a7e17b;
+}
+
+.purple {
+    background: #d9c1df;
+}
+
+.review {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.review p {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #171717;
+}
+
+.review span {
+    font-family: Arial, sans-serif;
+    font-size: 7px;
+    color: #555;
+    margin-top: 7px;
+}
+
+.product {
+    height: 70px;
+    background: #f5f5f5;
+    border: 1px solid #222;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pack {
+    width: 50px;
+    height: 100%;
+    flex-shrink: 0;
+    border: 1px solid #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 5px;
+    font-weight: bold;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+    color: white;
+}
+
+.orange {
+    background: #e87839;
+}
+
+.mint {
+    background: #74ad58;
+}
+
+.gold {
+    background: #efa900;
+}
+
+.lime {
+    background: #8ebd4b;
+}
+
+.violet {
+    background: #b49ac5;
+}
+
+.product-name {
+    flex: 1;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.product button {
+    background: white;
+    border: 1px solid #222;
+    border-radius: 20px;
+    padding: 7px 10px;
+    font-size: 12px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#origins {
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10% 0px;
+}
+
+#origins h2 {
+    text-align: center;
+    font-size: 25px;
+    background-color: #73BC25;
+    text-transform: uppercase;
+    font-weight: bolder;
+    width: 170px;
+    border: 1px solid black;
+    margin: 0px auto;
+    border-radius: 3px;
+    rotate: -3deg;
+}
+
+#origins h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 80px;
+    color: white;
+    font-weight: 800;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#origins h5{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-top: 150px;
+    font-family: "Reckless";
+    padding: 0px 60px;
+}
+
+.dashes{
+    width: 370px;
+    height: 100px;
+    display: flex;
+    margin: 0px auto;
+    margin-top: 200px;
+}
+
+.dash{
+    width: 33.3%;
+    height: 100%;
+    display: block;
+}
+
+.dash img{
+    width: 55%;
+    margin: 0px auto;
+}
+
+.dash p{
+    font-size: 11px;
+    color: white;
+    padding: 7px 0px;
+    font-weight: 500;
+    text-align: center;
+}
+
+#origins button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 80px;
+    background: white;
+    padding: 7px 30px;
+    border-radius: 30px;
+}
